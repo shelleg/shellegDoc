@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Testing Shelleg &mdash; Shelleg 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Shelleg 0.1 documentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Shelleg
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro.html">Introduction to Shelleg project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../playbooks/index.html">Playbooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roles/index.html">Roles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Shelleg CI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TheTeam.html">Meet the team</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Shelleg</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Testing Shelleg</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Testing/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="testing-shelleg">
+<h1>Testing Shelleg<a class="headerlink" href="#testing-shelleg" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="open-questions">
+<h2>Open Questions<a class="headerlink" href="#open-questions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>How do we validate the integration between the different components / matrix of the solueion ?</li>
+<li>Sucess criteria ?</li>
+<li>different distribution bundle - testing per bundle ... ?</li>
+</ul>
+</div>
+</div>
+<div class="section" id="shelleg-continuos-integration">
+<h1>Shelleg Continuos integration<a class="headerlink" href="#shelleg-continuos-integration" title="Permalink to this headline">¶</a></h1>
+<p>The big question is how do we test the different deployment matrix.
+In the log term as described in one of our group meetings on the subject we will have the following (potential) matrix:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="46%" />
+<col width="15%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Toolchain / Impl</th>
+<th class="head">Options</th>
+<th class="head">Milestone X</th>
+<th class="head">Saas/Pass/Iaas</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">SCM</td>
+<td>Gitlab / Gerrit / Github / Bitbucket (Stash)</td>
+<td>Gitlab</td>
+<td>Iaas</td>
+</tr>
+<tr class="row-odd"><td>Github</td>
+<td>Github</td>
+<td>Saas</td>
+</tr>
+<tr class="row-even"><td rowspan="2">CI / orchestration</td>
+<td>Jenkins</td>
+<td>Jenkins</td>
+<td>Iaas</td>
+</tr>
+<tr class="row-odd"><td>Jenkins</td>
+<td>Jenkins</td>
+<td>Saas (cloudbees)</td>
+</tr>
+<tr class="row-even"><td rowspan="3">Binary repo</td>
+<td>Artifactory / Nexus</td>
+<td>Artifactory</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Artifactory</td>
+<td>Artifactory</td>
+<td>Saas (cloud based)</td>
+</tr>
+<tr class="row-even"><td>Nexus</td>
+<td>Nexus</td>
+<td>Iaas</td>
+</tr>
+<tr class="row-odd"><td rowspan="2">Issue tracker</td>
+<td>redmine</td>
+<td>redmine</td>
+<td>Iaas</td>
+</tr>
+<tr class="row-even"><td>redmine</td>
+<td>redmine</td>
+<td><a class="reference external" href="https://plan.io">https://plan.io</a></td>
+</tr>
+<tr class="row-odd"><td rowspan="2">Code Quality</td>
+<td>Sonar Qube</td>
+<td>Sonar Qube</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Sonar Qube</td>
+<td>Sonar Qube</td>
+<td>cloudbees</td>
+</tr>
+<tr class="row-odd"><td>Image creation</td>
+<td>Packer</td>
+<td>Packer</td>
+<td>Iaas</td>
+</tr>
+<tr class="row-even"><td rowspan="5">Deployment</td>
+<td>Iaas</td>
+<td>virtualbox</td>
+<td>Iaas</td>
+</tr>
+<tr class="row-odd"><td>Iaas</td>
+<td>AWS</td>
+<td>Iaas</td>
+</tr>
+<tr class="row-even"><td>Iaas</td>
+<td>GCE</td>
+<td>Iaas</td>
+</tr>
+<tr class="row-odd"><td>Iaas</td>
+<td>Digital Gocean</td>
+<td>Iaas</td>
+</tr>
+<tr class="row-even"><td>Paas</td>
+<td>AWS + Cloud
+formation</td>
+<td>Iaas</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Tikal DevOps Team.
+      Last updated on Jun 16, 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
