@@ -230,6 +230,16 @@ dummy:
 	@echo
 	@echo "Build finished. Dummy builder generates no files."
 
+.PHONY: setup-gh-pages
+setup-gh-pages:
+	git branch | grep "^  gh-pages" &>/dev/null || git checkout --orphan gh-pages
+	#git branch | grep "^  gh-pages" &>/dev/null && git checkout gh-pages
+	rm -rf * .gitignore
+	[[ -f .nojekyll ]] || touch .nojekyll
+	git add .
+	git commit -m "Initial commit"
+	git checkout master
+
 .PHONY: gh-pages
 gh-pages:
 	git checkout gh-pages;
