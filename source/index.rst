@@ -14,4 +14,6 @@ Contents:
    Intro
    playbooks/index
    roles/index
+   testing/index
+   contributing
    TheTeam

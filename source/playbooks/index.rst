@@ -1,4 +1,4 @@
-Shellg playbooks
+Playbooks
 ================
 
 All the role's magix glued together:
@@ -8,7 +8,7 @@ site.yml -> performs
 includes:
 
     * scm.yml -> Optinally mix and match between Gitlab
-    * ci.yml ->
+    * jenkins.yml -> The continuous integration server
 
 
 
@@ -16,4 +16,4 @@ includes:
    :maxdepth: 2
 
    scm
-   ci
+   jenkins

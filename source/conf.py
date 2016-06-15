@@ -376,7 +376,3 @@ def setup(app):
     app.add_stylesheet('theme_overrides.css')
 
 
-# github pages
-sphinx_to_github = True
-sphinx_to_github_verbose = True
-sphinx_to_github_encoding = "utf-8"

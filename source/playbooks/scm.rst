@@ -14,7 +14,7 @@ Default attributes:
 | some key           | String           | val            |
 +--------------------+------------------+----------------+
 
-Roles:
+Roles in Playbook:
     * common
     * gitlab
 

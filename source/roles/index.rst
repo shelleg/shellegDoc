@@ -1,4 +1,4 @@
-Shelleg Roles
+Roles
 =============
 
 The roles built for Shelleg project will eventually cover a wide matrix of integrations.
