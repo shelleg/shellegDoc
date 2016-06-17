@@ -1,21 +1,59 @@
 Meet the team
 =============
-
-
-
-<h1>Meet<img src="_static/cutlet-icon.png" alt="meet" align="middle">The Team</h1>
-
-
-
-    .. image:: _static/cutlet-icon.png
-
-    The
-
-    .. image:: _static/fullstack_mascott.jpeg
-
-    Team
-
- -> Sorry Veagns ... ;)
-
++-------------------+-+
+|Name               | |
++===================+=+
+|Amos Sonnenwirth   | |
++-------------------+-+
+|Kosta Klevensky    | |
++-------------------+-+
+|Miron Gofer        | |
++-------------------+-+
+|Ram-on Agmon       | |
++-------------------+-+
+|Salo Shpigelman    | |
++-------------------+-+
+|Shachar Ben-Zeev   | |
++-------------------+-+
+|Yoram Michaeli     | |
++-------------------+-+
+|Adam Balali        | |
++-------------------+-+
+|Avi Amsalem        | |
++-------------------+-+
+|Boris Komraz       | |
++-------------------+-+
+|Dan Hirsh          | |
++-------------------+-+
+|Gil Shinar         | |
++-------------------+-+
+|Guy Michaelis      | |
++-------------------+-+
+|Ivan Prokhorov     | |
++-------------------+-+
+|Shalom Kazaz       | |
++-------------------+-+
+|Amir Misgav        | |
++-------------------+-+
+|Chen Cohen         | |
++-------------------+-+
+|Doron Shai         | |
++-------------------+-+
+|Gilad Judes        | |
++-------------------+-+
+|Michael Alexandrov | |
++-------------------+-+
+|Ron Malachi        | |
++-------------------+-+
+|Sergei Makarevich  | |
++-------------------+-+
+|Sergei Olshanetski | |
++-------------------+-+
+|Itai Or            | |
++-------------------+-+
+|Liya Katz          | |
++-------------------+-+
+|Haggai P Zagury    | |
++-------------------+-+
 
 
