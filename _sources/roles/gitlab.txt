@@ -1,6 +1,0 @@
-Gitlab role
-===========
-
-
-
-.. disqus::
