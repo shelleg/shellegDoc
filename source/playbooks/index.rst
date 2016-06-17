@@ -1,7 +1,7 @@
 Playbooks
 ================
 
-All the role's magix glued together:
+All the role's magic glued together:
 
 site.yml -> performs
 
@@ -17,3 +17,5 @@ includes:
 
    scm
    jenkins
+
+.. disqus::

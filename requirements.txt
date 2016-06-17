@@ -21,6 +21,8 @@ smartypants==1.8.6
 snowballstemmer==1.2.1
 Sphinx==1.4.1
 sphinx-rtd-theme==0.1.9
+sphinxcontrib-disqus==1.0.0
+sphinxtogithub==1.1.0
 typogrify==2.0.7
 Unidecode==0.4.19
 webassets==0.11.1
