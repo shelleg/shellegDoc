@@ -18,3 +18,4 @@ Roles in Playbook:
     * common
     * gitlab
 
+.. disqus::

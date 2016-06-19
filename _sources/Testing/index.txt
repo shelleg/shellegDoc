@@ -54,3 +54,6 @@ In the log term as described in one of our group meetings on the subject we will
 |                    | Paas                                           | AWS + Cloud    | Iaas               |
 |                    |                                                | formation      |                    |
 +--------------------+------------------------------------------------+----------------+--------------------+
+
+
+.. disqus::
