@@ -12,6 +12,7 @@ Repository naming conventions:
 -----------------------------
 
 Considering this org might host other repos besides Ansible Roles/Modules I suggest we add suffixes to repo names:
+
 * Ansible Roles suffixed with <role name>-ansible-role
 * Ansible Modules -> my suggestion would be to contribute via Ansibles-extras which means we will need to
 follow their guidelines specified `here: <https://github.com/ansible/ansible-modules-extras/blob/devel/REVIEWERS.md>`_
