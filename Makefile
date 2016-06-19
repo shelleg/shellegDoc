@@ -252,5 +252,5 @@ gh-pages:
 	rm -rf $(GH_PAGES_SOURCES) build
 	git add -A
 	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --stat`"
-	git push -f origin gh-pages
+	git push origin gh-pages
 	git checkout master
