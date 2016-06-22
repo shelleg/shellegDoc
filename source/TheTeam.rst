@@ -1,43 +1,43 @@
 Meet the team
 =============
 +-------------------+-+
-|Name               | |
+|Name               | responsibly |
 +===================+=+
 |Amos Sonnenwirth   | |
 +-------------------+-+
-|Kosta Klevensky    | |
+|Kosta Klevensky    | redmine |
 +-------------------+-+
 |Miron Gofer        | |
 +-------------------+-+
-|Ram-on Agmon       | |
+|Ram-on Agmon       | Consul,MariaDB |
 +-------------------+-+
 |Salo Shpigelman    | |
 +-------------------+-+
 |Shachar Ben-Zeev   | |
 +-------------------+-+
-|Yoram Michaeli     | |
+|Yoram Michaeli     | SonarQube |
 +-------------------+-+
 |Adam Balali        | |
 +-------------------+-+
 |Avi Amsalem        | |
 +-------------------+-+
-|Boris Komraz       | |
+|Boris Komraz       | Docker |
 +-------------------+-+
-|Dan Hirsh          | |
+|Dan Hirsh          | Docker |
 +-------------------+-+
 |Gil Shinar         | |
 +-------------------+-+
-|Guy Michaelis      | |
+|Guy Michaelis      | Artifactory |
 +-------------------+-+
-|Ivan Prokhorov     | |
+|Ivan Prokhorov     | Gitlab |
 +-------------------+-+
 |Shalom Kazaz       | |
 +-------------------+-+
-|Amir Misgav        | |
+|Amir Misgav        | Docker registry |
 +-------------------+-+
-|Chen Cohen         | |
+|Chen Cohen         | Jenkins |
 +-------------------+-+
-|Doron Shai         | |
+|Doron Shai         | ELK |
 +-------------------+-+
 |Gilad Judes        | |
 +-------------------+-+
@@ -49,11 +49,11 @@ Meet the team
 +-------------------+-+
 |Sergei Olshanetski | |
 +-------------------+-+
-|Itai Or            | |
+|Itai Or            | Packer with Ubuntu 16.04 virtaulbox & Amazon AMI2 |
 +-------------------+-+
 |Liya Katz          | |
 +-------------------+-+
-|Haggai P Zagury    | |
+|Haggai P Zagury    | Documentation, |
 +-------------------+-+
 
 
