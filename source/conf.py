@@ -376,5 +376,5 @@ def setup(app):
         #app.add_javascript("custom.js")
     app.add_stylesheet('theme_overrides.css')
 
-disqus_shortname = 'shellegdoc'
+disqus_shortname = 'shellgdoc'
 
