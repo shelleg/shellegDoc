@@ -16,9 +16,9 @@ pushd /vagrant/
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /etc/bash_completion.d/virtualenvwrapper
-mkvirtualenv OSTKLdocs
-workon OSTKLdocs
+mkvirtualenv shellegDoc
+workon shellegDoc
 pip install -r requirements.txt
-make html
+make watch
 
 popd

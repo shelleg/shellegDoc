@@ -239,7 +239,9 @@ setup-gh-pages:
 	git add .
 	git commit -m "Initial commit"
 	git checkout master
-
+.PHONY: watch
+watch:
+	sphinx-autobuild --host 0.0.0.0 source build/html
 .PHONY: gh-pages
 gh-pages:
 	git checkout gh-pages;
