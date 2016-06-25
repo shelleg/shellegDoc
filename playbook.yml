@@ -1,0 +1,42 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  tasks:
+    - name: "Install required packages"
+      apt: name={{ item }} state=latest
+      become: true
+      with_items:
+      - virtualenvwrapper
+      - python-pip
+      - python-dev
+      - bash-completion
+      - vim
+      - libjpeg-dev
+      - make
+      - nginx
+
+    - name: "Create VirtualEnv 4 shellgDoc"
+      shell: . /etc/bash_completion.d/virtualenvwrapper && mkvirtualenv shellgDoc
+      become: true
+      become_user: vagrant
+      args:
+        executable: /bin/bash
+        creates: shellgDoc
+
+    - name: "Install pip requirements"
+      pip: requirements=/vagrant/requirements.txt
+
+    - name: "Execute make html"
+      shell: "make html"
+      args:
+        executable: /bin/bash
+        chdir: /vagrant
+
+    - name: remove /var/www/html
+      become: yes
+      shell: rm -Rfv /var/www/html
+
+    - name: symbolic link between /var/www/html and /vagrant/build/html
+      become: yes
+      file: src=/vagrant/build/html dest=/var/www/html state=link
