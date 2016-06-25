@@ -15,6 +15,9 @@
 import sys
 import os
 import sphinx_rtd_theme
+from recommonmark.parser import CommonMarkParser
+
+
 # import recommonmark
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -34,6 +37,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
     'sphinx.ext.githubpages',
+    'sphinx_issues',
     'sphinxcontrib.disqus',
 ]
 
@@ -378,3 +382,11 @@ def setup(app):
 
 disqus_shortname = 'shellgdoc'
 
+# Github repo
+issues_github_path = 'shelleg/shelleg'
+
+source_parsers = {
+    '.md': 'recommonmark.parser.CommonMarkParser',
+}
+
+source_suffix = ['.rst', '.md']
