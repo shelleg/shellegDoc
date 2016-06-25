@@ -3,13 +3,13 @@ Contributing to Shelleg CI
 
 
 SCM Github:
-----------
+-----------
 
 * Organization: `shelleg <https://github.com/shelleg>`_
 * Admins `Tikal-devops team <https://github.com/orgs/shelleg/teams/tikal-devops>`_
 
 Repository naming conventions:
------------------------------
+------------------------------
 
 Considering this org might host other repos besides Ansible Roles/Modules I suggest we add suffixes to repo names:
 
@@ -18,6 +18,6 @@ Considering this org might host other repos besides Ansible Roles/Modules I sugg
 Any naming convention will probebly come from there ...
 
 Discussions / Help:
------------
+-------------------
 
 * Let's discuss any others in our `slack channel link <https://tikal.slack.com/messages/shelleg/>`_

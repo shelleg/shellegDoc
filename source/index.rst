@@ -15,9 +15,10 @@ Contents:
    Intro
    playbooks/index
    roles/index
-   testing/index
+   Testing/index
    contributing
    TheTeam
+   setup
 
 Github Issues:
 --------------
