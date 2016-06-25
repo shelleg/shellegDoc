@@ -8,3 +8,4 @@ _static
 search.html
 searchindex.js
 .vagrant
+*.retry
