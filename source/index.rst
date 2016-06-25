@@ -7,6 +7,7 @@ Welcome to Shelleg's documentation!
 ===================================
 
 Contents:
+---------
 
 .. toctree::
    :maxdepth: 2
@@ -17,3 +18,7 @@ Contents:
    testing/index
    contributing
    TheTeam
+
+Github Issues:
+--------------
+See issue :issue:`1`
