@@ -49,7 +49,7 @@ The roles built for Shelleg project will eventually cover a wide matrix of integ
 
 
 Adding roles
-########
+############
 Adding more roles to link below by adding a <role_name>.rst file in the source/roles/directory and adding it to the doctree entry in the index.rst (this file)
 
 

@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to setup Shelleg docs &mdash; Shelleg 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Shelleg 0.1 documentation" href="index.html"/>
+        <link rel="prev" title="Meet the team &amp; Their doings ..." href="TheTeam.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Shelleg
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction to Shelleg project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="playbooks/index.html">Playbooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roles/index.html">Roles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Testing/index.html">Testing Shelleg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Testing/index.html#shelleg-continuos-integration">Shelleg Continuos integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to Shelleg CI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TheTeam.html">Meet the team &amp; Their doings ...</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to setup Shelleg docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#minimal-requirements">Minimal requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#full-equirements">Full equirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart">QuickStart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shellegdoc-playbook">ShellegDoc Playbook</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#for-local-development-on-your-local-machine">For local development (on your local machine):</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-required-packadges">install required packadges:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-virtualenv">Create a virtualenv:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#switch-to-virtualenv-shellegdoc">Switch to virtualenv shellegDoc:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-requirements-in-virtualenv-shellegdoc">Install requirements in virtualenv <code class="docutils literal"><span class="pre">shellegDoc</span></code>:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-html-watch">make html / watch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Shelleg</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>How to setup Shelleg docs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/setup.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-setup-shelleg-docs">
+<span id="how-to-setup-shelleg-docs"></span><h1>How to setup Shelleg docs<a class="headerlink" href="#how-to-setup-shelleg-docs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="minimal-requirements">
+<span id="minimal-requirements"></span><h2>Minimal requirements<a class="headerlink" href="#minimal-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>python 2.7 or greater</li>
+<li>virtualenv</li>
+<li>All the requirements specified in requirements.txt</li>
+</ul>
+</div>
+<div class="section" id="full-equirements">
+<span id="full-equirements"></span><h2>Full equirements<a class="headerlink" href="#full-equirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>all Minimal requiremsnts</li>
+<li>Vagrant (tested with 1.8.4)</li>
+<li>Virtualbox (tested with 5.0.16)</li>
+</ul>
+</div>
+<div class="section" id="quickstart">
+<span id="quickstart"></span><h2>QuickStart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
+<p>Just execute <code class="docutils literal"><span class="pre">vagrant</span> <span class="pre">up</span></code> then point your browser &#64; http://172.16.1.2,
+every time you make a change and don&#8217;t want to push it yet but review it just run <code class="docutils literal"><span class="pre">vagrant</span> <span class="pre">provision</span></code></p>
+</div>
+<div class="section" id="shellegdoc-playbook">
+<span id="shellegdoc-playbook"></span><h2>ShellegDoc Playbook<a class="headerlink" href="#shellegdoc-playbook" title="Permalink to this headline">¶</a></h2>
+<p>This is pretty straight-forward / quick an dirty implementation of the <code class="docutils literal"><span class="pre">python_env.sh</span></code></p>
+<ul class="simple">
+<li>Install required packages</li>
+<li>Create VirtualEnv 4 shellgDoc</li>
+<li>Install pip requirements from <code class="docutils literal"><span class="pre">requirements.txt</span></code></li>
+<li>Execute <code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code></li>
+<li>Clean <code class="docutils literal"><span class="pre">/var/www/html</span></code></li>
+<li>link <code class="docutils literal"><span class="pre">/var/www/html</span></code> to <code class="docutils literal"><span class="pre">/vagrant/build/html</span></code></li>
+</ul>
+<p><strong>please note: this is like i said quick and dirty ...</strong></p>
+<div class="section" id="for-local-development-on-your-local-machine">
+<span id="for-local-development-on-your-local-machine"></span><h3>For local development (on your local machine):<a class="headerlink" href="#for-local-development-on-your-local-machine" title="Permalink to this headline">¶</a></h3>
+<p>Everything you need is described in <code class="docutils literal"><span class="pre">python_env.sh</span></code> which used to be executed by vagrant, <strong>please note this file isn&#8217;t maintained anymore</strong></p>
+<p>It basically install&#8217;s all requirements and then runs make targets to get the docs served by <code class="docutils literal"><span class="pre">sphinx-autobuild</span></code>.
+worth noting:
+<code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code> is the make targer that will build the site from <code class="docutils literal"><span class="pre">./source/...</span></code> into <code class="docutils literal"><span class="pre">./build/*</span></code>
+<code class="docutils literal"><span class="pre">make</span> <span class="pre">watch</span></code> uses <code class="docutils literal"><span class="pre">sphinx-autobuild</span></code> module to instatiate an http server on port 8000.</p>
+<p>Minimal requirements, as specified above will suffice for local development.</p>
+<div class="section" id="install-required-packadges">
+<span id="install-required-packadges"></span><h4>install required packadges:<a class="headerlink" href="#install-required-packadges" title="Permalink to this headline">¶</a></h4>
+<p><em>On ubuntu</em>
+<code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">virtualenvwrapper</span> <span class="pre">python-pip</span> <span class="pre">python-dev</span> <span class="pre">bash-completion</span> <span class="pre">vim</span> <span class="pre">libjpeg-dev</span> <span class="pre">make</span></code></p>
+<p><em>On MaxOSX</em>
+install virtualenv &amp; virtualenv wrapper via <code class="docutils literal"><span class="pre">homebrew</span></code>
+<code class="docutils literal"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">pyenv-virtualenvwrapper</span></code></p>
+</div>
+<div class="section" id="create-a-virtualenv">
+<span id="create-a-virtualenv"></span><h4>Create a virtualenv:<a class="headerlink" href="#create-a-virtualenv" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal"><span class="pre">export</span> <span class="pre">WORKON_HOME=$HOME/.virtualenvs</span></code>
+<code class="docutils literal"><span class="pre">export</span> <span class="pre">PROJECT_HOME=$HOME/Devel</span></code>
+<code class="docutils literal"><span class="pre">source</span> <span class="pre">/etc/bash_completion.d/virtualenvwrapper</span></code>
+<code class="docutils literal"><span class="pre">mkvirtualenv</span> <span class="pre">OSTKLdocs</span></code></p>
+</div>
+<div class="section" id="switch-to-virtualenv-shellegdoc">
+<span id="switch-to-virtualenv-shellegdoc"></span><h4>Switch to virtualenv shellegDoc:<a class="headerlink" href="#switch-to-virtualenv-shellegdoc" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal"><span class="pre">workon</span> <span class="pre">shellegDoc</span></code> will force all python packages to be installed in the <code class="docutils literal"><span class="pre">shallegDoc</span></code> virtual environment</p>
+</div>
+<div class="section" id="install-requirements-in-virtualenv-shellegdoc">
+<span id="install-requirements-in-virtualenv-shellegdoc"></span><h4>Install requirements in virtualenv <code class="docutils literal"><span class="pre">shellegDoc</span></code>:<a class="headerlink" href="#install-requirements-in-virtualenv-shellegdoc" title="Permalink to this headline">¶</a></h4>
+<p>cd /path/to/dir
+pip install -r requirements.txt</p>
+</div>
+<div class="section" id="make-html-watch">
+<span id="make-html-watch"></span><h4>make html / watch<a class="headerlink" href="#make-html-watch" title="Permalink to this headline">¶</a></h4>
+<p>In the root folder execute <code class="docutils literal"><span class="pre">make</span> <span class="pre">watch</span></code> this will instatiate a web server listening on 0.0.0.0 on port 8000
+output should look like so:</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>$ make watch 
+sphinx-autobuild -q --host 0.0.0.0 <span class="nb">source</span> build/html
+
++--------- manually triggered build ---------------------------------------------
+
+<span class="o">[</span>I <span class="m">160625</span> 18:35:33 server:281<span class="o">]</span> Serving on http://0.0.0.0:8000
+<span class="o">[</span>I <span class="m">160625</span> 18:35:33 handlers:59<span class="o">]</span> Start watching changes
+<span class="o">[</span>I <span class="m">160625</span> 18:35:33 handlers:61<span class="o">]</span> Start detecting changes
+<span class="o">[</span>I <span class="m">160625</span> 18:35:40 handlers:132<span class="o">]</span> Browser Connected: http://localhost:8000/index.html
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="TheTeam.html" class="btn btn-neutral" title="Meet the team &amp; Their doings ..." accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Tikal DevOps Team.
+      Last updated on Jun 25, 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="_static/disqus.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
