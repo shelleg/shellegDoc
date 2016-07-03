@@ -5,8 +5,8 @@ Contributing to Shelleg CI
 SCM Github:
 -----------
 
-* Organization: `shelleg <https://github.com/shelleg>`_
-* Admins `Tikal-devops team <https://github.com/orgs/shelleg/teams/tikal-devops>`_
+* Organization: `Shelleg <https://github.com/Shelleg>`_
+* Admins `Tikal-devops team <https://github.com/orgs/Shelleg/teams/tikal-devops>`_
 
 Repository naming conventions:
 ------------------------------
@@ -20,4 +20,4 @@ Any naming convention will probebly come from there ...
 Discussions / Help:
 -------------------
 
-* Let's discuss any others in our `slack channel link <https://tikal.slack.com/messages/shelleg/>`_
+* Let's discuss any others in our `slack channel link <https://tikal.slack.com/messages/Shelleg/>`_

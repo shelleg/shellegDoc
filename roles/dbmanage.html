@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>dbmanage role &mdash; Shelleg 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Shelleg 0.1 documentation" href="../index.html"/>
+        <link rel="up" title="Roles" href="index.html"/>
+        <link rel="next" title="Gitlab role" href="gitlab.html"/>
+        <link rel="prev" title="Roles" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Shelleg
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../devenv/index.html">Setting up a devenv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../playbooks/index.html">Playbooks</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Roles</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">dbmanage role</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detail">Detail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#used-in-playbook-s">Used in Playbook(s)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tested-on">Tested on</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gitlab.html">Gitlab role</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jenkins.html">Jenkins role</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#adding-roles">Adding roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Shelleg CI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup.html">How to setup Shelleg docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Shelleg</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Roles</a> &raquo;</li>
+      
+    <li>dbmanage role</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/roles/dbmanage.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dbmanage-role">
+<span id="dbmanage-role"></span><h1>dbmanage role<a class="headerlink" href="#dbmanage-role" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<span id="synopsis"></span><h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Maanages database servers, I plan to support <code class="docutils literal"><span class="pre">mariadb</span></code> [ complete ], <code class="docutils literal"><span class="pre">mysql</span> <span class="pre">community</span></code>, <code class="docutils literal"><span class="pre">postgresql</span></code>.
+Out of the box with no changes you get <strong>mariadb 10.0</strong> on both <strong>Centos 7</strong> &amp; <strong>Ubunutu 16.04</strong>.</p>
+</div>
+<div class="section" id="usage">
+<span id="usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Just include in your playbook for example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">hosts</span><span class="p">:</span> <span class="n">servers</span>
+  <span class="n">roles</span><span class="p">:</span>
+     <span class="o">-</span> <span class="p">{</span> <span class="n">role</span><span class="p">:</span> <span class="n">dbmanage</span><span class="o">-</span><span class="n">ansible</span><span class="o">-</span><span class="n">role</span> <span class="p">}</span>
+     <span class="o">-</span> <span class="p">{</span> <span class="n">role</span><span class="p">:</span> <span class="n">sonar</span><span class="o">-</span><span class="n">ansible</span><span class="o">-</span><span class="n">role</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>or - override defaults such as flavor and mode like so:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">hosts</span><span class="p">:</span> <span class="n">servers</span>
+  <span class="n">roles</span><span class="p">:</span>
+     <span class="o">-</span> <span class="p">{</span> <span class="n">role</span><span class="p">:</span> <span class="n">dbmanage</span><span class="o">-</span><span class="n">ansible</span><span class="o">-</span><span class="n">role</span><span class="p">,</span> <span class="n">db_mode</span><span class="p">:</span> <span class="n">remote</span><span class="p">,</span> <span class="n">db_flavor</span><span class="p">:</span> <span class="n">rds</span> <span class="p">}</span>
+     <span class="o">-</span> <span class="p">{</span> <span class="n">role</span><span class="p">:</span> <span class="n">artifactory</span><span class="o">-</span><span class="n">ansible</span><span class="o">-</span><span class="n">role</span> <span class="p">}</span>
+     <span class="o">-</span> <span class="p">{</span> <span class="n">role</span><span class="p">:</span> <span class="n">jenkins</span><span class="o">-</span><span class="n">ansible</span><span class="o">-</span><span class="n">role</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="detail">
+<span id="detail"></span><h2>Detail<a class="headerlink" href="#detail" title="Permalink to this headline">¶</a></h2>
+<p>This secion will definitely grow as we add support for other databases..</p>
+</div>
+<div class="section" id="used-in-playbook-s">
+<span id="used-in-playbook-s"></span><h2>Used in Playbook(s)<a class="headerlink" href="#used-in-playbook-s" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>./playbook.yml line 7 -&gt; to check defaults</li>
+<li>./playbook.yml line 8,9 -&gt; to check postgresql or mysql flavors ...</li>
+</ul>
+</div>
+<div class="section" id="tested-on">
+<span id="tested-on"></span><h2>Tested on<a class="headerlink" href="#tested-on" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Ubuntu 16.04</li>
+<li>Centos 7</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gitlab.html" class="btn btn-neutral float-right" title="Gitlab role" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Roles" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Tikal DevOps Team.
+      Last updated on Jul 03, 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="../_static/disqus.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

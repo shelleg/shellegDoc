@@ -43,6 +43,7 @@ The roles built for Shelleg project will eventually cover a wide matrix of integ
 .. toctree::
    :maxdepth: 2
 
+   dbmanage
    gitlab
    jenkins
 

@@ -12,12 +12,13 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   Intro
+   intro
+   devenv/index
    playbooks/index
    roles/index
-   Testing/index
+   testing/index
    contributing
-   TheTeam
+   theTeam
    setup
 
 Github Issues:
