@@ -18,7 +18,7 @@ Contents:
    roles/index
    testing/index
    contributing
-   theTeam
+   TheTeam
    setup
 
 Github Issues:

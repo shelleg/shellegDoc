@@ -8,13 +8,13 @@ sudo apt-get install -y virtualenvwrapper python-pip python-dev bash-completion 
 echo \
 '# Virtualenvwrapper stuff
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
+export PROJECT_HOME=$HOME/Tikal
 ' >> /home/vagrant/.bashrc
 
 pushd /vagrant/
 
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
+export PROJECT_HOME=$HOME/Tikal
 source /etc/bash_completion.d/virtualenvwrapper
 mkvirtualenv shellegDoc
 workon shellegDoc
