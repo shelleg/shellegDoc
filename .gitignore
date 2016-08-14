@@ -3,8 +3,8 @@ build
 playbooks
 testing
 _sources
-_static
 search.html
 searchindex.js
 .vagrant
 *.retry
+*~
