@@ -4,10 +4,15 @@
     var params = "?access_token=" + TOKEN;
     var TEAMID = "2032450";
     var TEAM_MEMBERS_URL = ROOT_URL + "/teams/" + TEAMID + "/members" + params;
-
+    var ORG_REPOS_URL = ROOT_URL + "/orgs/shelleg/repos" + params;
 
     var container = $("#contributors_dynamic");
     var contributors_table = $('#contributors_data');
+
+    $.get(ORG_REPOS_URL)
+        .done(function (data) {
+            renderStats(data);
+        });
 
     $.get(TEAM_MEMBERS_URL)
         .done(function (data) {
@@ -15,16 +20,25 @@
         });
 
     function getSingleUser(username, callback) {
-        $.get(ROOT_URL + "/users/" + username + params).done(function (data) {
-            callback(data);
+        $.get(ROOT_URL + "/users/" + username + params)
+            .done(function (data) {
+                callback(data);
+            });
+    }
+
+    function renderStats(data) {
+        $.each(data, function (index, item) {
+            $.get(ROOT_URL + "/repos/shelleg/" + item + "/stats/contributors" + params)
+                .done(function (item) {
+                    console.log(item);
+                });
         });
     }
 
     function renderMembers(data) {
-        console.log('here');
         $.each(data, function (index, item) {
-            console.log(item);
             var tr = $('<tr>');
+            tr.data('login', item.login);
 
             var avatar_img = $("<img>", { src: item.avatar_url, class: "github_avatar" });
             var avatar_td = $("<td>").html(avatar_img);
@@ -33,6 +47,7 @@
             var username_td = $('<td>').html(login_link);
 
             var first_name = "";
+
             getSingleUser(item.login, function (user_data) {
                 first_name = $('<td>').html(user_data.name);
                 tr.append(avatar_td)
